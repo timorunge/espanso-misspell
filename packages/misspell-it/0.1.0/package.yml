@@ -1,0 +1,1327 @@
+name: misspell-it
+parent: default
+matches:
+  - trigger: Boleslaw Twardowski
+    replace: Bolesław Twardowski
+    propagate_case: true
+    word: true
+  - trigger: Copenhagen
+    replace: Copenaghen
+    propagate_case: true
+    word: true
+  - trigger: Edimburgh
+    replace: Edinburgh
+    propagate_case: true
+    word: true
+  - trigger: GNU/GPL
+    replace: GNU GPL
+    propagate_case: true
+    word: true
+  - trigger: ISNB
+    replace: ISBN
+    propagate_case: true
+    word: true
+  - trigger: Inghiltera
+    replace: Inghilterra
+    propagate_case: true
+    word: true
+  - trigger: Istambul
+    replace: Istanbul
+    propagate_case: true
+    word: true
+  - trigger: Jan Maurycy Pawel Puzyna de Kosielsko
+    replace: Jan Maurycy Paweł Puzyna de Kosielsko
+    propagate_case: true
+    word: true
+  - trigger: Javascript
+    replace: JavaScript
+    propagate_case: true
+    word: true
+  - trigger: Mieczyslaw Halka Ledóchowski
+    replace: Mieczysław Halka Ledóchowski
+    propagate_case: true
+    word: true
+  - trigger: Missisipi
+    replace: Mississippi
+    propagate_case: true
+    word: true
+  - trigger: Mitterand
+    replace: Mitterrand
+    propagate_case: true
+    word: true
+  - trigger: Panamá
+    replace: Panama
+    propagate_case: true
+    word: true
+  - trigger: Philarmoniker
+    replace: Philharmoniker
+    propagate_case: true
+    word: true
+  - trigger: Youtube
+    replace: YouTube
+    propagate_case: true
+    word: true
+  - trigger: a mo di
+    replace: a mo' di
+    propagate_case: true
+    word: true
+  - trigger: a mò di
+    replace: a mo' di
+    propagate_case: true
+    word: true
+  - trigger: a riguardo
+    replace: al riguardo
+    propagate_case: true
+    word: true
+  - trigger: a se
+    replace: a sé
+    propagate_case: true
+    word: true
+  - trigger: a sè
+    replace: a sé
+    propagate_case: true
+    word: true
+  - trigger: accorod
+    replace: accordo
+    propagate_case: true
+    word: true
+  - trigger: affianco
+    replace: a fianco
+    propagate_case: true
+    word: true
+  - trigger: affinchè
+    replace: affinché
+    propagate_case: true
+    word: true
+  - trigger: al lato pratico
+    replace: all'atto pratico
+    propagate_case: true
+    word: true
+  - trigger: aldifuori
+    replace: al di fuori
+    propagate_case: true
+    word: true
+  - trigger: allorchè
+    replace: allorché
+    propagate_case: true
+    word: true
+  - trigger: alora
+    replace: allora
+    propagate_case: true
+    word: true
+  - trigger: altretanto
+    replace: altrettanto
+    propagate_case: true
+    word: true
+  - trigger: ampiamento
+    replace: ampliamento
+    propagate_case: true
+    word: true
+  - trigger: ampliamente
+    replace: ampiamente
+    propagate_case: true
+    word: true
+  - trigger: anchè
+    replace: anche
+    propagate_case: true
+    word: true
+  - trigger: anché
+    replace: anche
+    propagate_case: true
+    word: true
+  - trigger: anzicchè
+    replace: anziché
+    propagate_case: true
+    word: true
+  - trigger: apparte
+    replace: a parte
+    propagate_case: true
+    word: true
+  - trigger: appropio
+    replace: approprio
+    propagate_case: true
+    word: true
+  - trigger: appropiò
+    replace: appropriò
+    propagate_case: true
+    word: true
+  - trigger: aquistare
+    replace: acquistare
+    propagate_case: true
+    word: true
+  - trigger: arcipelagi
+    replace: arcipelaghi
+    propagate_case: true
+    word: true
+  - trigger: areare
+    replace: aerare
+    propagate_case: true
+    word: true
+  - trigger: areazione
+    replace: aerazione
+    propagate_case: true
+    word: true
+  - trigger: ascie
+    replace: asce
+    propagate_case: true
+    word: true
+  - trigger: attualemente
+    replace: attualmente
+    propagate_case: true
+    word: true
+  - trigger: avvalla
+    replace: avalla
+    propagate_case: true
+    word: true
+  - trigger: avvallare
+    replace: avallare
+    propagate_case: true
+    word: true
+  - trigger: avvallo
+    replace: avallo
+    propagate_case: true
+    word: true
+  - trigger: benchè
+    replace: benché
+    propagate_case: true
+    word: true
+  - trigger: beneficienza
+    replace: beneficenza
+    propagate_case: true
+    word: true
+  - trigger: biscie
+    replace: bisce
+    propagate_case: true
+    word: true
+  - trigger: bizzaro
+    replace: bizzarro
+    propagate_case: true
+    word: true
+  - trigger: blù
+    replace: blu
+    propagate_case: true
+    word: true
+  - trigger: bolscevici
+    replace: bolscevichi
+    propagate_case: true
+    word: true
+  - trigger: breccie
+    replace: brecce
+    propagate_case: true
+    word: true
+  - trigger: c'è ne
+    replace: ce n'è
+    propagate_case: true
+    word: true
+  - trigger: cantate
+    replace: cantante
+    propagate_case: true
+    word: true
+  - trigger: capacita
+    replace: capacità
+    propagate_case: true
+    word: true
+  - trigger: capacità di saper
+    replace: capacità di
+    propagate_case: true
+    word: true
+  - trigger: caposaldi
+    replace: capisaldi
+    propagate_case: true
+    word: true
+  - trigger: capuccio
+    replace: cappuccio
+    propagate_case: true
+    word: true
+  - trigger: cioé
+    replace: cioè
+    propagate_case: true
+    word: true
+  - trigger: citta
+    replace: città
+    propagate_case: true
+    word: true
+  - trigger: cità
+    replace: città
+    propagate_case: true
+    word: true
+  - trigger: clichè
+    replace: cliché
+    propagate_case: true
+    word: true
+  - trigger: cliscè
+    replace: cliché
+    propagate_case: true
+    word: true
+  - trigger: colluttorio
+    replace: collutorio
+    propagate_case: true
+    word: true
+  - trigger: come d'accordo
+    replace: come da accordo
+    propagate_case: true
+    word: true
+  - trigger: con se
+    replace: con sé
+    propagate_case: true
+    word: true
+  - trigger: con sè
+    replace: con sé
+    propagate_case: true
+    word: true
+  - trigger: conclusioni aperte
+    replace: conclusioni
+    propagate_case: true
+    word: true
+  - trigger: consequenza
+    replace: conseguenza
+    propagate_case: true
+    word: true
+  - trigger: consequenze
+    replace: conseguenze
+    propagate_case: true
+    word: true
+  - trigger: controla
+    replace: controlla
+    propagate_case: true
+    word: true
+  - trigger: controli
+    replace: controlli
+    propagate_case: true
+    word: true
+  - trigger: controlo
+    replace: controllo
+    propagate_case: true
+    word: true
+  - trigger: copies
+    replace: copie
+    propagate_case: true
+    word: true
+  - trigger: correzzione
+    replace: correzione
+    propagate_case: true
+    word: true
+  - trigger: cosi
+    replace: così
+    propagate_case: true
+    word: true
+  - trigger: cosiddeta
+    replace: cosiddetta
+    propagate_case: true
+    word: true
+  - trigger: d'alto borgo
+    replace: d'alto bordo
+    propagate_case: true
+    word: true
+  - trigger: d'apprima
+    replace: dapprima
+    propagate_case: true
+    word: true
+  - trigger: d'avanti
+    replace: davanti
+    propagate_case: true
+    word: true
+  - trigger: d'ha
+    replace: dà
+    propagate_case: true
+    word: true
+  - trigger: da Terra
+    replace: dalla Terra
+    propagate_case: true
+    word: true
+  - trigger: da se
+    replace: da sé
+    propagate_case: true
+    word: true
+  - trigger: da sè
+    replace: da sé
+    propagate_case: true
+    word: true
+  - trigger: daccordo
+    replace: d'accordo
+    propagate_case: true
+    word: true
+  - trigger: dal'altro
+    replace: dall'altro
+    propagate_case: true
+    word: true
+  - trigger: daltronde
+    replace: d'altronde
+    propagate_case: true
+    word: true
+  - trigger: definitamente
+    replace: definitivamente
+    propagate_case: true
+    word: true
+  - trigger: delgli
+    replace: degli
+    propagate_case: true
+    word: true
+  - trigger: dell'Adolorata
+    replace: dell'Addolorata
+    propagate_case: true
+    word: true
+  - trigger: depliant
+    replace: dépliant
+    propagate_case: true
+    word: true
+  - trigger: di alto borgo
+    replace: di alto bordo
+    propagate_case: true
+    word: true
+  - trigger: dicendoli
+    replace: dicendogli
+    propagate_case: true
+    word: true
+  - trigger: diffcoltà
+    replace: difficoltà
+    propagate_case: true
+    word: true
+  - trigger: difronte
+    replace: di fronte
+    propagate_case: true
+    word: true
+  - trigger: difuori
+    replace: di fuori
+    propagate_case: true
+    word: true
+  - trigger: dilà
+    replace: di là
+    propagate_case: true
+    word: true
+  - trigger: dinuovo
+    replace: di nuovo
+    propagate_case: true
+    word: true
+  - trigger: diqua
+    replace: di qua
+    propagate_case: true
+    word: true
+  - trigger: diquà
+    replace: di qua
+    propagate_case: true
+    word: true
+  - trigger: diseguito
+    replace: di seguito
+    propagate_case: true
+    word: true
+  - trigger: disputà
+    replace: disputa
+    propagate_case: true
+    word: true
+  - trigger: dopodichè
+    replace: dopodiché
+    propagate_case: true
+    word: true
+  - trigger: dèpliant
+    replace: dépliant
+    propagate_case: true
+    word: true
+  - trigger: dò
+    replace: do
+    propagate_case: true
+    word: true
+  - trigger: ecc...
+    replace: ecc.
+    propagate_case: true
+    word: true
+  - trigger: ed'è
+    replace: ed è
+    propagate_case: true
+    word: true
+  - trigger: ed'é
+    replace: ed è
+    propagate_case: true
+    word: true
+  - trigger: edinburgo
+    replace: Edimburgo
+    propagate_case: true
+    word: true
+  - trigger: efficacie
+    replace: efficace
+    propagate_case: true
+    word: true
+  - trigger: effige
+    replace: effigie
+    propagate_case: true
+    word: true
+  - trigger: elite
+    replace: élite
+    propagate_case: true
+    word: true
+  - trigger: elitè
+    replace: élite
+    propagate_case: true
+    word: true
+  - trigger: elité
+    replace: élite
+    propagate_case: true
+    word: true
+  - trigger: empasse
+    replace: impasse
+    propagate_case: true
+    word: true
+  - trigger: enpasse
+    replace: impasse
+    propagate_case: true
+    word: true
+  - trigger: entro e non oltre
+    replace: entro
+    propagate_case: true
+    word: true
+  - trigger: entusiasto
+    replace: entusiasta
+    propagate_case: true
+    word: true
+  - trigger: eprché
+    replace: perché
+    propagate_case: true
+    word: true
+  - trigger: equipe
+    replace: équipe
+    propagate_case: true
+    word: true
+  - trigger: esplusione
+    replace: espulsione
+    propagate_case: true
+    word: true
+  - trigger: essenzialemente
+    replace: essenzialmente
+    propagate_case: true
+    word: true
+  - trigger: faccie
+    replace: facce
+    propagate_case: true
+    word: true
+  - trigger: far si che
+    replace: far sì che
+    propagate_case: true
+    word: true
+  - trigger: fascie
+    replace: fasce
+    propagate_case: true
+    word: true
+  - trigger: fin'ora
+    replace: finora
+    propagate_case: true
+    word: true
+  - trigger: finalemente
+    replace: finalmente
+    propagate_case: true
+    word: true
+  - trigger: fintantochè
+    replace: fintantoché
+    propagate_case: true
+    word: true
+  - trigger: fratempo
+    replace: frattempo
+    propagate_case: true
+    word: true
+  - trigger: fuori di sè
+    replace: fuori di sé
+    propagate_case: true
+    word: true
+  - trigger: fù
+    replace: fu
+    propagate_case: true
+    word: true
+  - trigger: ganascie
+    replace: ganasce
+    propagate_case: true
+    word: true
+  - trigger: gia
+    replace: già
+    propagate_case: true
+    word: true
+  - trigger: giacchè
+    replace: giacché
+    propagate_case: true
+    word: true
+  - trigger: granchè
+    replace: granché
+    propagate_case: true
+    word: true
+  - trigger: granparte
+    replace: gran parte
+    propagate_case: true
+    word: true
+  - trigger: grazzie
+    replace: grazie
+    propagate_case: true
+    word: true
+  - trigger: hostare
+    replace: ospitare
+    propagate_case: true
+    word: true
+  - trigger: i carceri
+    replace: le carceri
+    propagate_case: true
+    word: true
+  - trigger: i gnocchi
+    replace: gli gnocchi
+    propagate_case: true
+    word: true
+  - trigger: i psicologhi
+    replace: gli psicologhi
+    propagate_case: true
+    word: true
+  - trigger: i psicologi
+    replace: gli psicologi
+    propagate_case: true
+    word: true
+  - trigger: i zero
+    replace: gli zero
+    propagate_case: true
+    word: true
+  - trigger: il Secchia
+    replace: la Secchia
+    propagate_case: true
+    word: true
+  - trigger: il gnocco
+    replace: lo gnocco
+    propagate_case: true
+    word: true
+  - trigger: il psicologo
+    replace: lo psicologo
+    propagate_case: true
+    word: true
+  - trigger: il zero
+    replace: lo zero
+    propagate_case: true
+    word: true
+  - trigger: in condizione di poter
+    replace: in condizione di
+    propagate_case: true
+    word: true
+  - trigger: in condizioni di poter
+    replace: in condizioni di
+    propagate_case: true
+    word: true
+  - trigger: in contro
+    replace: incontro
+    propagate_case: true
+    word: true
+  - trigger: in grado di poter
+    replace: in grado di
+    propagate_case: true
+    word: true
+  - trigger: inefficacie
+    replace: inefficace
+    propagate_case: true
+    word: true
+  - trigger: infondo
+    replace: in fondo
+    propagate_case: true
+    word: true
+  - trigger: inquanto
+    replace: in quanto
+    propagate_case: true
+    word: true
+  - trigger: intervenì
+    replace: intervenne
+    propagate_case: true
+    word: true
+  - trigger: introno
+    replace: intorno
+    propagate_case: true
+    word: true
+  - trigger: latri
+    replace: altri
+    propagate_case: true
+    word: true
+  - trigger: leggittimo
+    replace: legittimo
+    propagate_case: true
+    word: true
+  - trigger: libreria del Congresso
+    replace: Biblioteca del Congresso
+    propagate_case: true
+    word: true
+  - trigger: line up
+    replace: formazione
+    propagate_case: true
+    word: true
+  - trigger: line-up
+    replace: formazione
+    propagate_case: true
+    word: true
+  - trigger: lineup
+    replace: formazione
+    propagate_case: true
+    word: true
+  - trigger: liscie
+    replace: lisce
+    propagate_case: true
+    word: true
+  - trigger: lunog
+    replace: lungo
+    propagate_case: true
+    word: true
+  - trigger: magazini
+    replace: magazzini
+    propagate_case: true
+    word: true
+  - trigger: maggioparte
+    replace: maggior parte
+    propagate_case: true
+    word: true
+  - trigger: maggiorparte
+    replace: maggior parte
+    propagate_case: true
+    word: true
+  - trigger: malvage
+    replace: malvagie
+    propagate_case: true
+    word: true
+  - trigger: manmano
+    replace: man mano
+    propagate_case: true
+    word: true
+  - trigger: menager
+    replace: manager
+    propagate_case: true
+    word: true
+  - trigger: menscevici
+    replace: menscevichi
+    propagate_case: true
+    word: true
+  - trigger: minaccie
+    replace: minacce
+    propagate_case: true
+    word: true
+  - trigger: moniker
+    replace: soprannome
+    propagate_case: true
+    word: true
+  - trigger: monocolori
+    replace: monocolore
+    propagate_case: true
+    word: true
+  - trigger: neanchè
+    replace: neanche
+    propagate_case: true
+    word: true
+  - trigger: neanché
+    replace: neanche
+    propagate_case: true
+    word: true
+  - trigger: nenache
+    replace: neanche
+    propagate_case: true
+    word: true
+  - trigger: nonchè
+    replace: nonché
+    propagate_case: true
+    word: true
+  - trigger: nononstante
+    replace: nonostante
+    propagate_case: true
+    word: true
+  - trigger: nonstante
+    replace: nonostante
+    propagate_case: true
+    word: true
+  - trigger: nè
+    replace: né
+    propagate_case: true
+    word: true
+  - trigger: oltrepo
+    replace: oltrepò
+    propagate_case: true
+    word: true
+  - trigger: onoreficenza
+    replace: onorificenza
+    propagate_case: true
+    word: true
+  - trigger: onoreficenze
+    replace: onorificenze
+    propagate_case: true
+    word: true
+  - trigger: onoreficienza
+    replace: onorificenza
+    propagate_case: true
+    word: true
+  - trigger: onoreficienze
+    replace: onorificenze
+    propagate_case: true
+    word: true
+  - trigger: onorificienza
+    replace: onorificenza
+    propagate_case: true
+    word: true
+  - trigger: onorificienze
+    replace: onorificenze
+    propagate_case: true
+    word: true
+  - trigger: orsono
+    replace: or sono
+    propagate_case: true
+    word: true
+  - trigger: osè
+    replace: osé
+    propagate_case: true
+    word: true
+  - trigger: overture
+    replace: ouverture
+    propagate_case: true
+    word: true
+  - trigger: palmarés
+    replace: palmarès
+    propagate_case: true
+    word: true
+  - trigger: panneli
+    replace: pannelli
+    propagate_case: true
+    word: true
+  - trigger: pannelo
+    replace: pannello
+    propagate_case: true
+    word: true
+  - trigger: paralello
+    replace: parallelo
+    propagate_case: true
+    word: true
+  - trigger: particolarmodo
+    replace: particolar modo
+    propagate_case: true
+    word: true
+  - trigger: per se
+    replace: per sé
+    propagate_case: true
+    word: true
+  - trigger: per sè
+    replace: per sé
+    propagate_case: true
+    word: true
+  - trigger: perche
+    replace: perché
+    propagate_case: true
+    word: true
+  - trigger: perchè
+    replace: perché
+    propagate_case: true
+    word: true
+  - trigger: percui
+    replace: per cui
+    propagate_case: true
+    word: true
+  - trigger: perfavore
+    replace: per favore
+    propagate_case: true
+    word: true
+  - trigger: perloppiù
+    replace: perlopiù
+    propagate_case: true
+    word: true
+  - trigger: pioggie
+    replace: piogge
+    propagate_case: true
+    word: true
+  - trigger: plexiglass
+    replace: plexiglas
+    propagate_case: true
+    word: true
+  - trigger: po
+    replace: po'
+    propagate_case: true
+    word: true
+  - trigger: pocanzi
+    replace: poc'anzi
+    propagate_case: true
+    word: true
+  - trigger: poichè
+    replace: poiché
+    propagate_case: true
+    word: true
+  - trigger: possibilità di poter
+    replace: possibilità di
+    propagate_case: true
+    word: true
+  - trigger: potè
+    replace: poté
+    propagate_case: true
+    word: true
+  - trigger: prediligie
+    replace: predilige
+    propagate_case: true
+    word: true
+  - trigger: premiere
+    replace: première
+    propagate_case: true
+    word: true
+  - trigger: pressocché
+    replace: pressoché
+    propagate_case: true
+    word: true
+  - trigger: pressochè
+    replace: pressoché
+    propagate_case: true
+    word: true
+  - trigger: prevenì
+    replace: prevenne
+    propagate_case: true
+    word: true
+  - trigger: primo debutto
+    replace: debutto
+    propagate_case: true
+    word: true
+  - trigger: primordine
+    replace: prim'ordine
+    propagate_case: true
+    word: true
+  - trigger: principale protagonista
+    replace: protagonista
+    propagate_case: true
+    word: true
+  - trigger: principalemente
+    replace: principalmente
+    propagate_case: true
+    word: true
+  - trigger: principali protagoniste
+    replace: protagoniste
+    propagate_case: true
+    word: true
+  - trigger: principali protagonisti
+    replace: protagonisti
+    propagate_case: true
+    word: true
+  - trigger: propi
+    replace: propri
+    propagate_case: true
+    word: true
+  - trigger: propieta
+    replace: proprietà
+    propagate_case: true
+    word: true
+  - trigger: propio
+    replace: proprio
+    propagate_case: true
+    word: true
+  - trigger: prorio
+    replace: proprio
+    propagate_case: true
+    word: true
+  - trigger: proseguio
+    replace: prosieguo
+    propagate_case: true
+    word: true
+  - trigger: protagonista principale
+    replace: protagonista
+    propagate_case: true
+    word: true
+  - trigger: protagoniste principali
+    replace: protagoniste
+    propagate_case: true
+    word: true
+  - trigger: protagonisti principali
+    replace: protagonisti
+    propagate_case: true
+    word: true
+  - trigger: proveniendo
+    replace: provenendo
+    propagate_case: true
+    word: true
+  - trigger: prèmiere prémiere premiére premieré premierè
+    replace: première
+    propagate_case: true
+    word: true
+  - trigger: pseudonomi
+    replace: pseudonimi
+    propagate_case: true
+    word: true
+  - trigger: pultroppo
+    replace: purtroppo
+    propagate_case: true
+    word: true
+  - trigger: purchè
+    replace: purché
+    propagate_case: true
+    word: true
+  - trigger: pìu
+    replace: più
+    propagate_case: true
+    word: true
+  - trigger: pò
+    replace: po'
+    propagate_case: true
+    word: true
+  - trigger: qual'era
+    replace: qual era
+    propagate_case: true
+    word: true
+  - trigger: qual'ora
+    replace: qualora
+    propagate_case: true
+    word: true
+  - trigger: qual'è
+    replace: qual è
+    propagate_case: true
+    word: true
+  - trigger: qualcun'altro
+    replace: qualcun altro
+    propagate_case: true
+    word: true
+  - trigger: quà
+    replace: qua
+    propagate_case: true
+    word: true
+  - trigger: quì
+    replace: qui
+    propagate_case: true
+    word: true
+  - trigger: realta
+    replace: realtà
+    propagate_case: true
+    word: true
+  - trigger: relatà
+    replace: realtà
+    propagate_case: true
+    word: true
+  - trigger: riescie
+    replace: riesce
+    propagate_case: true
+    word: true
+  - trigger: riguardo gli
+    replace: riguardo agli
+    propagate_case: true
+    word: true
+  - trigger: riguardo i
+    replace: riguardo ai
+    propagate_case: true
+    word: true
+  - trigger: riguardo il
+    replace: riguardo al
+    propagate_case: true
+    word: true
+  - trigger: riguardo la
+    replace: riguardo alla
+    propagate_case: true
+    word: true
+  - trigger: riguardo le
+    replace: riguardo alle
+    propagate_case: true
+    word: true
+  - trigger: riguardo lo
+    replace: riguardo allo
+    propagate_case: true
+    word: true
+  - trigger: rispetto gli
+    replace: rispetto agli
+    propagate_case: true
+    word: true
+  - trigger: rispetto i
+    replace: rispetto ai
+    propagate_case: true
+    word: true
+  - trigger: rispetto il
+    replace: rispetto al
+    propagate_case: true
+    word: true
+  - trigger: rispetto la
+    replace: rispetto alla
+    propagate_case: true
+    word: true
+  - trigger: rispetto le
+    replace: rispetto alle
+    propagate_case: true
+    word: true
+  - trigger: rispetto lo
+    replace: rispetto allo
+    propagate_case: true
+    word: true
+  - trigger: rollbackare
+    replace: ripristinare
+    propagate_case: true
+    word: true
+  - trigger: rumors
+    replace: indiscrezioni
+    propagate_case: true
+    word: true
+  - trigger: rumours
+    replace: indiscrezioni
+    propagate_case: true
+    word: true
+  - trigger: sara
+    replace: sarà
+    propagate_case: true
+    word: true
+  - trigger: sebene
+    replace: sebbene
+    propagate_case: true
+    word: true
+  - trigger: sennonché
+    replace: se non che
+    propagate_case: true
+    word: true
+  - trigger: senonchè
+    replace: se non che
+    propagate_case: true
+    word: true
+  - trigger: sensa
+    replace: senza
+    propagate_case: true
+    word: true
+  - trigger: sognamo
+    replace: sogniamo
+    propagate_case: true
+    word: true
+  - trigger: soprattuto
+    replace: soprattutto
+    propagate_case: true
+    word: true
+  - trigger: sottoforma
+    replace: sotto forma
+    propagate_case: true
+    word: true
+  - trigger: sottosta
+    replace: sottostà
+    propagate_case: true
+    word: true
+  - trigger: speci
+    replace: specie
+    propagate_case: true
+    word: true
+  - trigger: spiaggie
+    replace: spiagge
+    propagate_case: true
+    word: true
+  - trigger: striscie
+    replace: strisce
+    propagate_case: true
+    word: true
+  - trigger: stà
+    replace: sta
+    propagate_case: true
+    word: true
+  - trigger: succesivamente
+    replace: successivamente
+    propagate_case: true
+    word: true
+  - trigger: sucessivamente
+    replace: successivamente
+    propagate_case: true
+    word: true
+  - trigger: suddeta
+    replace: suddetta
+    propagate_case: true
+    word: true
+  - trigger: suddete
+    replace: suddette
+    propagate_case: true
+    word: true
+  - trigger: suddeti
+    replace: suddetti
+    propagate_case: true
+    word: true
+  - trigger: suddeto
+    replace: suddetto
+    propagate_case: true
+    word: true
+  - trigger: suffraggio
+    replace: suffragio
+    propagate_case: true
+    word: true
+  - trigger: sufraggio
+    replace: suffragio
+    propagate_case: true
+    word: true
+  - trigger: sufragio
+    replace: suffragio
+    propagate_case: true
+    word: true
+  - trigger: superfice
+    replace: superficie
+    propagate_case: true
+    word: true
+  - trigger: suspance
+    replace: suspense
+    propagate_case: true
+    word: true
+  - trigger: suspence
+    replace: suspense
+    propagate_case: true
+    word: true
+  - trigger: sà
+    replace: sa
+    propagate_case: true
+    word: true
+  - trigger: sè
+    replace: sé
+    propagate_case: true
+    word: true
+  - trigger: sò
+    replace: so
+    propagate_case: true
+    word: true
+  - trigger: sù
+    replace: su
+    propagate_case: true
+    word: true
+  - trigger: tea
+    replace: tè
+    propagate_case: true
+    word: true
+  - trigger: tee
+    replace: tè
+    propagate_case: true
+    word: true
+  - trigger: territtorio
+    replace: territorio
+    propagate_case: true
+    word: true
+  - trigger: the
+    replace: tè
+    propagate_case: true
+    word: true
+  - trigger: thé
+    replace: tè
+    propagate_case: true
+    word: true
+  - trigger: tournee tourneé tourneè tournees tourneés tourneès tournèe tournèes
+    replace: tournée
+    propagate_case: true
+    word: true
+  - trigger: tournée in giro
+    replace: tournée
+    propagate_case: true
+    word: true
+  - trigger: traccie
+    replace: tracce
+    propagate_case: true
+    word: true
+  - trigger: trai
+    replace: tra i
+    propagate_case: true
+    word: true
+  - trigger: tral'altro
+    replace: tra l'altro
+    propagate_case: true
+    word: true
+  - trigger: tralaltro
+    replace: tra l'altro
+    propagate_case: true
+    word: true
+  - trigger: trà
+    replace: tra
+    propagate_case: true
+    word: true
+  - trigger: tubi innocenti
+    replace: tubi Innocenti
+    propagate_case: true
+    word: true
+  - trigger: tunnell
+    replace: tunnel
+    propagate_case: true
+    word: true
+  - trigger: tuor
+    replace: tour
+    propagate_case: true
+    word: true
+  - trigger: tuti
+    replace: tutti
+    propagate_case: true
+    word: true
+  - trigger: tutt'ora
+    replace: tuttora
+    propagate_case: true
+    word: true
+  - trigger: tuttoggi
+    replace: tutt'oggi
+    propagate_case: true
+    word: true
+  - trigger: tuttuno
+    replace: tutt'uno
+    propagate_case: true
+    word: true
+  - trigger: té
+    replace: tè
+    propagate_case: true
+    word: true
+  - trigger: ufficialemente
+    replace: ufficialmente
+    propagate_case: true
+    word: true
+  - trigger: un amica
+    replace: un'amica
+    propagate_case: true
+    word: true
+  - trigger: un eco
+    replace: un'eco
+    propagate_case: true
+    word: true
+  - trigger: un gnocco
+    replace: uno gnocco
+    propagate_case: true
+    word: true
+  - trigger: un psicologo
+    replace: uno psicologo
+    propagate_case: true
+    word: true
+  - trigger: un zero
+    replace: uno zero
+    propagate_case: true
+    word: true
+  - trigger: un'altro
+    replace: un altro
+    propagate_case: true
+    word: true
+  - trigger: un'amalgama
+    replace: un amalgama
+    propagate_case: true
+    word: true
+  - trigger: un'insieme
+    replace: un insieme
+    propagate_case: true
+    word: true
+  - trigger: una stato
+    replace: uno stato
+    propagate_case: true
+    word: true
+  - trigger: una vera è propria
+    replace: una vera e propria
+    propagate_case: true
+    word: true
+  - trigger: unanimamente
+    replace: unanimemente
+    propagate_case: true
+    word: true
+  - trigger: valici
+    replace: valichi
+    propagate_case: true
+    word: true
+  - trigger: ventitrè
+    replace: ventitré
+    propagate_case: true
+    word: true
+  - trigger: veranno
+    replace: verranno
+    propagate_case: true
+    word: true
+  - trigger: verrano
+    replace: verranno
+    propagate_case: true
+    word: true
+  - trigger: vistoche
+    replace: visto che
+    propagate_case: true
+    word: true
+  - trigger: vocalist
+    replace: cantante
+    propagate_case: true
+    word: true
+  - trigger: và
+    replace: va
+    propagate_case: true
+    word: true
+  - trigger: xchè
+    replace: perché
+    propagate_case: true
+    word: true
+  - trigger: xkè
+    replace: perché
+    propagate_case: true
+    word: true
+  - trigger: élites
+    replace: élite
+    propagate_case: true
+    word: true

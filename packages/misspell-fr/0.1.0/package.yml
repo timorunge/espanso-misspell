@@ -1,0 +1,367 @@
+name: misspell-fr
+parent: default
+matches:
+  - trigger: A partir
+    replace: À partir
+    propagate_case: true
+    word: true
+  - trigger: Acte 1
+    replace: Acte I
+    propagate_case: true
+    word: true
+  - trigger: Acte 2
+    replace: Acte II
+    propagate_case: true
+    word: true
+  - trigger: Acte 3
+    replace: Acte III
+    propagate_case: true
+    word: true
+  - trigger: Acte 4
+    replace: Acte IV
+    propagate_case: true
+    word: true
+  - trigger: Acte 5
+    replace: Acte V
+    propagate_case: true
+    word: true
+  - trigger: Camberra
+    replace: Canberra
+    propagate_case: true
+    word: true
+  - trigger: Clémenceau
+    replace: Clemenceau
+    propagate_case: true
+    word: true
+  - trigger: Ecologie
+    replace: Écologie
+    propagate_case: true
+    word: true
+  - trigger: Hawai
+    replace: Hawaii
+    propagate_case: true
+    word: true
+  - trigger: III
+    replace: IV
+    propagate_case: true
+    word: true
+  - trigger: Lybie
+    replace: Libye
+    propagate_case: true
+    word: true
+  - trigger: Panamá
+    replace: Panama
+    propagate_case: true
+    word: true
+  - trigger: UK
+    replace: Royaume-Uni
+    propagate_case: true
+    word: true
+  - trigger: VI
+    replace: VII
+    propagate_case: true
+    word: true
+  - trigger: XI
+    replace: XII
+    propagate_case: true
+    word: true
+  - trigger: Y a t'il
+    replace: Y a-t-il
+    propagate_case: true
+    word: true
+  - trigger: a disparue
+    replace: a disparu
+    propagate_case: true
+    word: true
+  - trigger: a grandit
+    replace: a grandi
+    propagate_case: true
+    word: true
+  - trigger: a partir
+    replace: à partir
+    propagate_case: true
+    word: true
+  - trigger: a permi
+    replace: a permis
+    propagate_case: true
+    word: true
+  - trigger: a réagit
+    replace: a réagi
+    propagate_case: true
+    word: true
+  - trigger: acenseur
+    replace: ascenseur
+    propagate_case: true
+    word: true
+  - trigger: acqueux
+    replace: aqueux
+    propagate_case: true
+    word: true
+  - trigger: aggio
+    replace: agio
+    propagate_case: true
+    word: true
+  - trigger: aigü
+    replace: aigu
+    propagate_case: true
+    word: true
+  - trigger: armoirie
+    replace: armoiries
+    propagate_case: true
+    word: true
+  - trigger: arrété
+    replace: arrêté
+    propagate_case: true
+    word: true
+  - trigger: atteind
+    replace: atteint
+    propagate_case: true
+    word: true
+  - trigger: aux dépends
+    replace: aux dépens
+    propagate_case: true
+    word: true
+  - trigger: ayant-droit
+    replace: ayant droit
+    propagate_case: true
+    word: true
+  - trigger: bijous
+    replace: bijoux
+    propagate_case: true
+    word: true
+  - trigger: bisoux
+    replace: bisous
+    propagate_case: true
+    word: true
+  - trigger: brebi
+    replace: brebis
+    propagate_case: true
+    word: true
+  - trigger: caillous
+    replace: cailloux
+    propagate_case: true
+    word: true
+  - trigger: calin
+    replace: câlin
+    propagate_case: true
+    word: true
+  - trigger: car en effet
+    replace: car
+    propagate_case: true
+    word: true
+  - trigger: celà
+    replace: cela
+    propagate_case: true
+    word: true
+  - trigger: ceuillir
+    replace: cueillir
+    propagate_case: true
+    word: true
+  - trigger: chous
+    replace: choux
+    propagate_case: true
+    word: true
+  - trigger: comme par exemple
+    replace: comme
+    propagate_case: true
+    word: true
+  - trigger: comme, par exemple,
+    replace: comme
+    propagate_case: true
+    word: true
+  - trigger: concour
+    replace: concours
+    propagate_case: true
+    word: true
+  - trigger: corrolaire
+    replace: corollaire
+    propagate_case: true
+    word: true
+  - trigger: croyent
+    replace: croient
+    propagate_case: true
+    word: true
+  - trigger: dissidence en
+    replace: dissidence de
+    propagate_case: true
+    word: true
+  - trigger: dûs
+    replace: dus
+    propagate_case: true
+    word: true
+  - trigger: ecologie
+    replace: écologie
+    propagate_case: true
+    word: true
+  - trigger: emental
+    replace: emmental
+    propagate_case: true
+    word: true
+  - trigger: emploit
+    replace: emploi
+    propagate_case: true
+    word: true
+  - trigger: eménager
+    replace: emménager
+    propagate_case: true
+    word: true
+  - trigger: est emprunt
+    replace: est empreint
+    propagate_case: true
+    word: true
+  - trigger: est emprunte
+    replace: est empreinte
+    propagate_case: true
+    word: true
+  - trigger: ex aequo
+    replace: ex æquo
+    propagate_case: true
+    word: true
+  - trigger: exangue
+    replace: exsangue
+    propagate_case: true
+    word: true
+  - trigger: exhaucer
+    replace: exaucer
+    propagate_case: true
+    word: true
+  - trigger: exsite
+    replace: existe
+    propagate_case: true
+    word: true
+  - trigger: faux prétexte
+    replace: prétexte
+    propagate_case: true
+    word: true
+  - trigger: genous
+    replace: genoux
+    propagate_case: true
+    word: true
+  - trigger: grace à
+    replace: grâce à
+    propagate_case: true
+    word: true
+  - trigger: hibous
+    replace: hiboux
+    propagate_case: true
+    word: true
+  - trigger: incluera
+    replace: inclura
+    propagate_case: true
+    word: true
+  - trigger: inégibilité
+    replace: inéligibilité
+    propagate_case: true
+    word: true
+  - trigger: joujous
+    replace: joujoux
+    propagate_case: true
+    word: true
+  - trigger: kW/h
+    replace: kWh
+    propagate_case: true
+    word: true
+  - trigger: kms
+    replace: km
+    propagate_case: true
+    word: true
+  - trigger: les leur
+    replace: les leurs
+    propagate_case: true
+    word: true
+  - trigger: les même
+    replace: les mêmes
+    propagate_case: true
+    word: true
+  - trigger: oyé
+    replace: oyez
+    propagate_case: true
+    word: true
+  - trigger: parcour
+    replace: parcours
+    propagate_case: true
+    word: true
+  - trigger: pous
+    replace: poux
+    propagate_case: true
+    word: true
+  - trigger: puis ensuite
+    replace: puis
+    propagate_case: true
+    word: true
+  - trigger: puit
+    replace: puits
+    propagate_case: true
+    word: true
+  - trigger: quatre vingts
+    replace: quatre-vingts
+    propagate_case: true
+    word: true
+  - trigger: quattuor
+    replace: quatuor
+    propagate_case: true
+    word: true
+  - trigger: quelque fois
+    replace: quelquefois
+    propagate_case: true
+    word: true
+  - trigger: quelque soit
+    replace: quel que soit
+    propagate_case: true
+    word: true
+  - trigger: quelques temps
+    replace: quelque temps
+    propagate_case: true
+    word: true
+  - trigger: résoud
+    replace: résout
+    propagate_case: true
+    word: true
+  - trigger: résouds
+    replace: résous
+    propagate_case: true
+    word: true
+  - trigger: serais gré
+    replace: saurais gré
+    propagate_case: true
+    word: true
+  - trigger: sont empruntes
+    replace: sont empreintes
+    propagate_case: true
+    word: true
+  - trigger: sont emprunts
+    replace: sont empreints
+    propagate_case: true
+    word: true
+  - trigger: t'il
+    replace: t-il
+    propagate_case: true
+    word: true
+  - trigger: un espèce
+    replace: une espèce
+    propagate_case: true
+    word: true
+  - trigger: vainct
+    replace: vainc
+    propagate_case: true
+    word: true
+  - trigger: velour
+    replace: velours
+    propagate_case: true
+    word: true
+  - trigger: voire même
+    replace: voire
+    propagate_case: true
+    word: true
+  - trigger: volontier
+    replace: volontiers
+    propagate_case: true
+    word: true
+  - trigger: É-U
+    replace: États-Unis
+    propagate_case: true
+    word: true
+  - trigger: à posteriori
+    replace: à postériori
+    propagate_case: true
+    word: true

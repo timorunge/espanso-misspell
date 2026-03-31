@@ -1,3 +1,5 @@
+// Command generate produces espanso misspell packages for multiple languages.
+
 package main
 
 import (
@@ -18,31 +20,11 @@ const (
 
 	packagesDir = "packages"
 
-	wortlisteURL = "https://de.wikipedia.org/w/index.php?title=Wikipedia:Helferlein/Rechtschreibpr%C3%BCfung/Wortliste&action=raw"
-	listadoURL   = "https://es.wikipedia.org/w/index.php?title=Wikipedia:Corrector_ortogr%C3%A1fico/Listado&action=raw"
+	wikiDeURL = "https://de.wikipedia.org/w/index.php?title=Wikipedia:Helferlein/Rechtschreibpr%C3%BCfung/Wortliste&action=raw"
+	wikiEsURL = "https://es.wikipedia.org/w/index.php?title=Wikipedia:Corrector_ortogr%C3%A1fico/Listado&action=raw"
+	wikiFrURL = "https://fr.wikipedia.org/w/index.php?title=Wikip%C3%A9dia:Liste_de_fautes_d%27orthographe_courantes&action=raw"
+	wikiItURL = "https://it.wikipedia.org/w/index.php?title=Wikipedia:Bot/Richieste/Errori_comuni&action=raw"
 )
-
-const longDescEN = `# %[1]s
-
-%[1]s is an espanso package which is replacing %[2]s.
-The package is based on [github.com/client9/misspell](https://github.com/client9/misspell).
-
-## Installation
-
-` + "```" + `
-espanso install %[1]s
-espanso restart
-` + "```" + `
-
-## Usage
-
-Type ` + "`%[3]s`" + ` and see what's happening.
-
-## License
-
-[BSD 3-Clause "New" or "Revised" License](LICENSE)
-
-Misspell is [MIT](https://github.com/client9/misspell/blob/master/LICENSE).`
 
 const longDescDE = `# misspell-de
 
@@ -68,6 +50,28 @@ Type ` + "`Aaachen`" + ` and see it replaced with ` + "`Aachen`" + `.
 Word list data from Wikipedia is licensed under
 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).`
 
+const longDescEN = `# %[1]s
+
+%[1]s is an espanso package which is replacing %[2]s.
+The package is based on [github.com/client9/misspell](https://github.com/client9/misspell).
+
+## Installation
+
+` + "```" + `
+espanso install %[1]s
+espanso restart
+` + "```" + `
+
+## Usage
+
+Type ` + "`%[3]s`" + ` and see what's happening.
+
+## License
+
+[BSD 3-Clause "New" or "Revised" License](LICENSE)
+
+Misspell is [MIT](https://github.com/client9/misspell/blob/master/LICENSE).`
+
 const longDescES = `# misspell-es
 
 misspell-es is an espanso package which is replacing commonly misspelled
@@ -92,6 +96,54 @@ Type ` + "`accomodar`" + ` and see it replaced with ` + "`acomodar`" + `.
 Word list data from Wikipedia is licensed under
 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).`
 
+const longDescFR = `# misspell-fr
+
+misspell-fr is an espanso package which is replacing commonly misspelled
+french words. The package is auto-generated from the
+[Wikipédia Liste de fautes d'orthographe courantes](https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Liste_de_fautes_d%27orthographe_courantes).
+
+## Installation
+
+` + "```" + `
+espanso install misspell-fr
+espanso restart
+` + "```" + `
+
+## Usage
+
+Type ` + "`aigü`" + ` and see it replaced with ` + "`aigu`" + `.
+
+## License
+
+[BSD 3-Clause "New" or "Revised" License](LICENSE)
+
+Word list data from Wikipedia is licensed under
+[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).`
+
+const longDescIT = `# misspell-it
+
+misspell-it is an espanso package which is replacing commonly misspelled
+italian words. The package is auto-generated from the
+[Wikipedia Errori comuni](https://it.wikipedia.org/wiki/Wikipedia:Bot/Richieste/Errori_comuni).
+
+## Installation
+
+` + "```" + `
+espanso install misspell-it
+espanso restart
+` + "```" + `
+
+## Usage
+
+Type ` + "`conbattere`" + ` and see it replaced with ` + "`combattere`" + `.
+
+## License
+
+[BSD 3-Clause "New" or "Revised" License](LICENSE)
+
+Word list data from Wikipedia is licensed under
+[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).`
+
 type pkg struct {
 	name      string
 	version   string
@@ -107,9 +159,9 @@ func dictFetcher(dict []string) func() (espanso.Matches, error) {
 	}
 }
 
-func wikiFetcher(url, lang string) func() (espanso.Matches, error) {
+func wikiFetcher(url, lang string, parse fetch.LineParser) func() (espanso.Matches, error) {
 	return func() (espanso.Matches, error) {
-		return fetch.Wikipedia(url, lang)
+		return fetch.Wikipedia(url, lang, parse)
 	}
 }
 
@@ -140,7 +192,7 @@ func main() {
 				name: "misspell-de", version: "0.1.0",
 				title: "Misspell DE", shortDesc: "Replace commonly misspelled german words.",
 				longDesc: longDescDE,
-				fetch:    wikiFetcher(wortlisteURL, "de"),
+				fetch:    wikiFetcher(wikiDeURL, "de", fetch.PipeLine),
 			},
 		},
 		"es": {
@@ -148,20 +200,36 @@ func main() {
 				name: "misspell-es", version: "0.1.0",
 				title: "Misspell ES", shortDesc: "Replace commonly misspelled spanish words.",
 				longDesc: longDescES,
-				fetch:    wikiFetcher(listadoURL, "es"),
+				fetch:    wikiFetcher(wikiEsURL, "es", fetch.PipeLine),
+			},
+		},
+		"fr": {
+			{
+				name: "misspell-fr", version: "0.1.0",
+				title: "Misspell FR", shortDesc: "Replace commonly misspelled french words.",
+				longDesc: longDescFR,
+				fetch:    wikiFetcher(wikiFrURL, "fr", fetch.TemplateLine("Suggestion")),
+			},
+		},
+		"it": {
+			{
+				name: "misspell-it", version: "0.1.0",
+				title: "Misspell IT", shortDesc: "Replace commonly misspelled italian words.",
+				longDesc: longDescIT,
+				fetch:    wikiFetcher(wikiItURL, "it", fetch.TemplateLine("BR1")),
 			},
 		},
 	}
 
 	targets := os.Args[1:]
 	if len(targets) == 0 || slices.Contains(targets, "all") {
-		targets = []string{"en", "de", "es"}
+		targets = []string{"en", "de", "es", "fr", "it"}
 	}
 
 	for _, lang := range targets {
 		pkgs, ok := packages[lang]
 		if !ok {
-			fmt.Fprintf(os.Stderr, "unknown language: %s (available: en, de, es)\n", lang)
+			fmt.Fprintf(os.Stderr, "unknown language: %s (available: en, de, es, fr, it)\n", lang)
 			os.Exit(1)
 		}
 		for _, p := range pkgs {
