@@ -1,10 +1,10 @@
 ---
-package_name: "misspell-en_UK"
-package_title: "Misspell en_UK"
-package_desc: "Replace american english with british english."
-package_version: "0.1.2"
-package_author: "Timo Runge"
-package_repo: "https://github.com/timorunge/espanso-misspell-en"
+package_name: misspell-en_UK
+package_title: Misspell en_UK
+package_desc: Replace american english with british english.
+package_version: 0.1.2
+package_author: Timo Runge
+package_repo: https://github.com/timorunge/espanso-misspell-en
 ---
 # misspell-en_UK
 

@@ -1,10 +1,10 @@
 ---
-package_name: "misspell-en"
-package_title: "Misspell EN"
-package_desc: "Replace commonly misspelled english words."
-package_version: "0.1.2"
-package_author: "Timo Runge"
-package_repo: "https://github.com/timorunge/espanso-misspell-en"
+package_name: misspell-en
+package_title: Misspell EN
+package_desc: Replace commonly misspelled english words.
+package_version: 0.1.2
+package_author: Timo Runge
+package_repo: https://github.com/timorunge/espanso-misspell-en
 ---
 # misspell-en
 
