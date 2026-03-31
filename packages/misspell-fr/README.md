@@ -25,7 +25,7 @@ Type `aigü` and see it replaced with `aigu`.
 
 ## License
 
-[BSD 3-Clause "New" or "Revised" License](LICENSE)
+[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
 
 Word list data from Wikipedia is licensed under
 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
