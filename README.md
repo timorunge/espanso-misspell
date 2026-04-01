@@ -8,10 +8,10 @@ replace commonly misspelled words in multiple languages.
 | Package | Language | Source | License | Entries |
 |---|---|---|---|---|
 | `misspell-de` | German | [Wikipedia Wortliste](https://de.wikipedia.org/wiki/Wikipedia:Helferlein/Rechtschreibpr%C3%BCfung/Wortliste) | CC BY-SA 4.0 | ~5.7k |
-| `misspell-en` | English | [client9/misspell](https://github.com/client9/misspell) DictMain | MIT | ~28k |
-| `misspell-en-codespell` | English | [codespell](https://github.com/codespell-project/codespell) | CC BY-SA 3.0 | ~50k |
-| `misspell-en_UK` | English | [client9/misspell](https://github.com/client9/misspell) DictBritish | MIT | ~1.5k |
-| `misspell-en_US` | English | [client9/misspell](https://github.com/client9/misspell) DictAmerican | MIT | ~1.6k |
+| `misspell-en` | English | [golangci/misspell](https://github.com/golangci/misspell) DictMain | MIT | ~28.1k |
+| `misspell-en-codespell` | English | [codespell](https://github.com/codespell-project/codespell) | CC BY-SA 3.0 | ~50.7k |
+| `misspell-en_UK` | English | [golangci/misspell](https://github.com/golangci/misspell) DictBritish | MIT | ~1.5k |
+| `misspell-en_US` | English | [golangci/misspell](https://github.com/golangci/misspell) DictAmerican | MIT | ~1.6k |
 | `misspell-es` | Spanish | [Wikipedia Corrector ortográfico](https://es.wikipedia.org/wiki/Wikipedia:Corrector_ortogr%C3%A1fico/Listado) | CC BY-SA 4.0 | ~19k |
 | `misspell-fr` | French | [Wikipédia Fautes d'orthographe](https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Liste_de_fautes_d%27orthographe_courantes) | CC BY-SA 4.0 | ~91 |
 | `misspell-it` | Italian | [Wikipedia Errori comuni](https://it.wikipedia.org/wiki/Wikipedia:Bot/Richieste/Errori_comuni) | CC BY-SA 4.0 | ~331 |

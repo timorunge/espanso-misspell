@@ -2,7 +2,7 @@
 package_name: misspell-en-codespell
 package_title: Misspell EN Codespell
 package_desc: Replace commonly misspelled english words (codespell).
-package_version: 0.1.0
+package_version: 0.1.1
 package_author: Timo Runge
 package_repo: https://github.com/timorunge/espanso-misspell
 ---

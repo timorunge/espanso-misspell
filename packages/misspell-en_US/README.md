@@ -2,14 +2,14 @@
 package_name: misspell-en_US
 package_title: Misspell en_US
 package_desc: Replace british english with american english.
-package_version: 0.1.2
+package_version: 0.1.3
 package_author: Timo Runge
 package_repo: https://github.com/timorunge/espanso-misspell
 ---
 # misspell-en_US
 
 misspell-en_US is an espanso package which is replacing british english with american english.
-The package is based on [github.com/client9/misspell](https://github.com/client9/misspell).
+The package is based on [github.com/golangci/misspell](https://github.com/golangci/misspell).
 
 ## Installation
 
@@ -26,4 +26,4 @@ Type `tyre` and see what's happening.
 
 [MIT License](LICENSE)
 
-Misspell is [MIT](https://github.com/client9/misspell/blob/master/LICENSE).
+Misspell is [MIT](https://github.com/golangci/misspell/blob/master/LICENSE).

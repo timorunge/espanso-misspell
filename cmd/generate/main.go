@@ -8,7 +8,7 @@ import (
 	"path/filepath"
 	"slices"
 
-	"github.com/client9/misspell"
+	"github.com/golangci/misspell"
 	"github.com/timorunge/espanso"
 
 	"github.com/timorunge/espanso-misspell/internal/fetch"
@@ -56,7 +56,7 @@ Word list data from Wikipedia is licensed under
 const longDescEN = `# %[1]s
 
 %[1]s is an espanso package which is replacing %[2]s.
-The package is based on [github.com/client9/misspell](https://github.com/client9/misspell).
+The package is based on [github.com/golangci/misspell](https://github.com/golangci/misspell).
 
 ## Installation
 
@@ -73,7 +73,7 @@ Type ` + "`%[3]s`" + ` and see what's happening.
 
 [MIT License](LICENSE)
 
-Misspell is [MIT](https://github.com/client9/misspell/blob/master/LICENSE).`
+Misspell is [MIT](https://github.com/golangci/misspell/blob/master/LICENSE).`
 
 const longDescES = `# misspell-es
 
@@ -202,21 +202,21 @@ func main() {
 	packages := map[string][]pkg{
 		"en": {
 			{
-				name: "misspell-en", version: "0.1.2",
+				name: "misspell-en", version: "0.1.3",
 				title: "Misspell EN", shortDesc: "Replace commonly misspelled english words.",
 				longDesc: fmt.Sprintf(longDescEN, "misspell-en", "commonly misspelled english words", "yuo"),
 				license:  mitLicense,
 				fetch:    dictFetcher(misspell.DictMain),
 			},
 			{
-				name: "misspell-en_UK", version: "0.1.2",
+				name: "misspell-en_UK", version: "0.1.3",
 				title: "Misspell en_UK", shortDesc: "Replace american english with british english.",
 				longDesc: fmt.Sprintf(longDescEN, "misspell-en_UK", "american english with british english", "color"),
 				license:  mitLicense,
 				fetch:    dictFetcher(misspell.DictBritish),
 			},
 			{
-				name: "misspell-en_US", version: "0.1.2",
+				name: "misspell-en_US", version: "0.1.3",
 				title: "Misspell en_US", shortDesc: "Replace british english with american english.",
 				longDesc: fmt.Sprintf(longDescEN, "misspell-en_US", "british english with american english", "tyre"),
 				license:  mitLicense,
@@ -225,7 +225,7 @@ func main() {
 		},
 		"codespell": {
 			{
-				name: "misspell-en-codespell", version: "0.1.0",
+				name: "misspell-en-codespell", version: "0.1.1",
 				title: "Misspell EN Codespell", shortDesc: "Replace commonly misspelled english words (codespell).",
 				longDesc: longDescCodespell,
 				license:  ccBySa30,
