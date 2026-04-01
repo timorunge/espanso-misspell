@@ -24,7 +24,7 @@ for maximum coverage without trigger conflicts.
 Generate all packages:
 
 ```bash
-go run ./cmd/generate
+make generate
 ```
 
 Generate packages for a specific language:
@@ -35,6 +35,16 @@ go run ./cmd/generate en codespell
 ```
 
 Output is written to `packages/`.
+
+## Development
+
+```bash
+make help      # Show all available targets
+make check     # Run all quality gates (fmt, tidy, vet, lint, test)
+make lint      # Run golangci-lint
+make test      # Run tests with race detector
+make generate  # Generate all espanso packages
+```
 
 ## License
 
