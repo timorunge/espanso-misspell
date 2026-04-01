@@ -1,0 +1,5 @@
+name: misspell-es
+title: Misspell ES
+description: Replace commonly misspelled spanish words.
+version: 0.1.0
+author: Timo Runge

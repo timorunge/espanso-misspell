@@ -1,10 +1,12 @@
-// Spell-check word list fetcher and line parsers for multiple formats.
-
+// Package fetch downloads spell-check word lists and parses them into
+// espanso matches.
 package fetch
 
 import (
 	"bufio"
+	"context"
 	"fmt"
+	"io"
 	"net/http"
 	"strings"
 
@@ -18,8 +20,8 @@ type LineParser func(line string) (typo, correction string, ok bool)
 // Fetch downloads a word list from url and parses it into espanso matches
 // using the given line parser. The lang parameter is used for User-Agent
 // and error messages.
-func Fetch(url, lang string, parse LineParser) (espanso.Matches, error) {
-	req, err := http.NewRequest(http.MethodGet, url, nil)
+func Fetch(ctx context.Context, url, lang string, parse LineParser) (espanso.Matches, error) {
+	req, err := http.NewRequestWithContext(ctx, http.MethodGet, url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("create request: %w", err)
 	}
@@ -30,14 +32,20 @@ func Fetch(url, lang string, parse LineParser) (espanso.Matches, error) {
 	if err != nil {
 		return nil, fmt.Errorf("fetch %s word list: %w", lang, err)
 	}
-	defer resp.Body.Close()
+	defer func() { _ = resp.Body.Close() }()
 
 	if resp.StatusCode != http.StatusOK {
+		_, _ = io.Copy(io.Discard, resp.Body)
 		return nil, fmt.Errorf("fetch %s word list: status %d", lang, resp.StatusCode)
 	}
 
+	return ParseLines(resp.Body, parse)
+}
+
+// ParseLines reads lines from r and parses each with the given line parser.
+func ParseLines(r io.Reader, parse LineParser) (espanso.Matches, error) {
 	var matches espanso.Matches
-	scanner := bufio.NewScanner(resp.Body)
+	scanner := bufio.NewScanner(r)
 	for scanner.Scan() {
 		typo, correction, ok := parse(scanner.Text())
 		if !ok {
@@ -49,7 +57,7 @@ func Fetch(url, lang string, parse LineParser) (espanso.Matches, error) {
 		})
 	}
 	if err := scanner.Err(); err != nil {
-		return nil, fmt.Errorf("read %s word list: %w", lang, err)
+		return nil, fmt.Errorf("read word list: %w", err)
 	}
 
 	return matches, nil
@@ -64,13 +72,17 @@ func PipeLine(line string) (string, string, bool) {
 		return "", "", false
 	}
 
-	parts := strings.SplitN(line, "|", 3)
-	if len(parts) != 3 {
+	typoRaw, rest, ok := strings.Cut(line, "|")
+	if !ok {
+		return "", "", false
+	}
+	_, corrRaw, ok := strings.Cut(rest, "|")
+	if !ok {
 		return "", "", false
 	}
 
-	typo := strings.TrimSpace(parts[0])
-	correction := strings.TrimSpace(parts[2])
+	typo := strings.TrimSpace(typoRaw)
+	correction := strings.TrimSpace(corrRaw)
 	if typo == "" || correction == "" {
 		return "", "", false
 	}
@@ -88,24 +100,23 @@ func PipeLine(line string) (string, string, bool) {
 // like {{Suggestion|typo|correction}} or {{BR1|typo|correction}}. Only simple
 // literal entries are kept; regex patterns, wildcards, and wiki markup are
 // skipped.
-func TemplateLine(template string) LineParser {
-	prefix := "{{" + template + "|"
+func TemplateLine(tmpl string) LineParser {
+	prefix := "{{" + tmpl + "|"
 
 	return func(line string) (string, string, bool) {
-		start := strings.Index(line, prefix)
-		if start < 0 {
+		_, after, found := strings.Cut(line, prefix)
+		if !found {
 			return "", "", false
 		}
-		rest := line[start+len(prefix):]
 
-		end := strings.Index(rest, "}}")
-		if end < 0 {
+		inner, _, found := strings.Cut(after, "}}")
+		if !found {
 			return "", "", false
 		}
 
 		// Extract positional arguments, skipping named params (key=value).
 		var args []string
-		for _, part := range strings.Split(rest[:end], "|") {
+		for _, part := range strings.Split(inner, "|") {
 			part = strings.TrimSpace(part)
 			if part == "" || strings.Contains(part, "=") {
 				continue

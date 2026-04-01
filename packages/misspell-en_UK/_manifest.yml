@@ -1,0 +1,5 @@
+name: misspell-en_UK
+title: Misspell en_UK
+description: Replace american english with british english.
+version: 0.1.2
+author: Timo Runge

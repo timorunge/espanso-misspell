@@ -1,0 +1,5 @@
+name: misspell-it
+title: Misspell IT
+description: Replace commonly misspelled italian words.
+version: 0.1.0
+author: Timo Runge

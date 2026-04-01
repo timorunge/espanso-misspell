@@ -1,0 +1,5 @@
+name: misspell-en-codespell
+title: Misspell EN Codespell
+description: Replace commonly misspelled english words (codespell).
+version: 0.1.0
+author: Timo Runge

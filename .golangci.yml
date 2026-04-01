@@ -1,0 +1,131 @@
+version: "2"
+
+run:
+  timeout: 5m
+  tests: true
+  modules-download-mode: readonly
+
+linters:
+  enable:
+    - errcheck
+    - govet
+    - ineffassign
+    - staticcheck
+    - unused
+    - misspell
+    - revive
+    - godot
+    - gosec
+    - gocritic
+    - gocyclo
+    - cyclop
+    - dupl
+    - unconvert
+    - unparam
+    - prealloc
+    - nilerr
+    - bodyclose
+    - noctx
+    - wastedassign
+    - modernize
+
+  disable:
+    - exhaustive
+    - exhaustruct
+    - varnamelen
+    - wrapcheck
+    - nlreturn
+    - wsl
+
+  settings:
+    errcheck:
+      check-type-assertions: false
+      check-blank: false
+
+    govet:
+      enable-all: true
+      disable:
+        - fieldalignment
+
+    gocyclo:
+      min-complexity: 20
+
+    cyclop:
+      max-complexity: 20
+
+    dupl:
+      threshold: 100
+
+    gocritic:
+      enabled-tags:
+        - diagnostic
+        - style
+        - performance
+      disabled-checks:
+        - unnamedResult
+        - hugeParam
+        - paramTypeCombine
+        - httpNoBody
+
+    revive:
+      rules:
+        - name: exported
+          severity: error
+          arguments:
+            - "checkPrivateReceivers"
+            - "sayRepetitiveInsteadOfStutters"
+        - name: package-comments
+          severity: error
+        - name: var-naming
+        - name: indent-error-flow
+        - name: error-return
+        - name: error-strings
+        - name: error-naming
+        - name: receiver-naming
+        - name: increment-decrement
+        - name: var-declaration
+        - name: range-val-in-closure
+        - name: range-val-address
+        - name: context-as-argument
+        - name: context-keys-type
+        - name: comment-spacings
+          severity: warning
+
+    godot:
+      scope: declarations
+      exclude:
+        - "^fixme:"
+        - "^todo:"
+      capital: false
+
+    gosec:
+      excludes:
+        - G301
+        - G304
+        - G602
+
+    misspell:
+      locale: US
+
+  exclusions:
+    rules:
+      - path: _test\.go
+        linters:
+          - gocyclo
+          - cyclop
+          - gosec
+          - gocritic
+          - errcheck
+          - dupl
+          - misspell
+      - path: cmd/generate/
+        linters:
+          - misspell
+
+issues:
+  max-issues-per-linter: 0
+  max-same-issues: 0
+
+formatters:
+  enable:
+    - gofmt

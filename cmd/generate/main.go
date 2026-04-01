@@ -2,6 +2,7 @@
 package main
 
 import (
+	"context"
 	"fmt"
 	"os"
 	"path/filepath"
@@ -14,9 +15,10 @@ import (
 )
 
 const (
-	author = "Timo Runge"
-	repo   = "https://github.com/timorunge/espanso-misspell"
-	year   = "2019-2026"
+	author      = "Timo Runge"
+	authorEmail = author + " <me@timorunge.com>"
+	repo        = "https://github.com/timorunge/espanso-misspell"
+	year        = "2019-2026"
 
 	packagesDir = "packages"
 
@@ -177,21 +179,18 @@ type pkg struct {
 	shortDesc string
 	longDesc  string
 	license   espanso.License
-	fetch     func() (espanso.Matches, error)
-	exclude   map[string]struct{} // triggers to exclude (cross-package dedup)
+	fetch     func(context.Context) (espanso.Matches, error)
 }
 
-var authorEmail = fmt.Sprintf("%s <me@timorunge.com>", author)
-
-func dictFetcher(dict []string) func() (espanso.Matches, error) {
-	return func() (espanso.Matches, error) {
-		return espanso.DictToMatches(dict), nil
+func dictFetcher(dict []string) func(context.Context) (espanso.Matches, error) {
+	return func(_ context.Context) (espanso.Matches, error) {
+		return espanso.DictToMatches(dict)
 	}
 }
 
-func urlFetcher(url, lang string, parse fetch.LineParser) func() (espanso.Matches, error) {
-	return func() (espanso.Matches, error) {
-		return fetch.Fetch(url, lang, parse)
+func urlFetcher(url, lang string, parse fetch.LineParser) func(context.Context) (espanso.Matches, error) {
+	return func(ctx context.Context) (espanso.Matches, error) {
+		return fetch.Fetch(ctx, url, lang, parse)
 	}
 }
 
@@ -277,8 +276,9 @@ func main() {
 	}
 
 	// Collect misspell-en triggers for codespell deduplication.
-	enTriggers := make(map[string]struct{})
+	var enTriggers map[string]struct{}
 	if slices.Contains(targets, "codespell") {
+		enTriggers = make(map[string]struct{})
 		for _, dict := range [][]string{misspell.DictMain, misspell.DictBritish, misspell.DictAmerican} {
 			for i := 0; i < len(dict); i += 2 {
 				enTriggers[dict[i]] = struct{}{}
@@ -286,48 +286,59 @@ func main() {
 		}
 	}
 
+	ctx := context.Background()
 	for _, lang := range targets {
 		pkgs, ok := packages[lang]
 		if !ok {
 			fmt.Fprintf(os.Stderr, "unknown language: %s (available: en, codespell, de, es, fr, it)\n", lang)
 			os.Exit(1)
 		}
-		for i := range pkgs {
+		for _, p := range pkgs {
+			var exclude map[string]struct{}
 			if lang == "codespell" {
-				pkgs[i].exclude = enTriggers
+				exclude = enTriggers
 			}
-			generate(pkgs[i])
+			if err := generate(ctx, p, exclude); err != nil {
+				fmt.Fprintf(os.Stderr, "%s: %v\n", p.name, err)
+				os.Exit(1)
+			}
 		}
 	}
 }
 
-func generate(p pkg) espanso.Matches {
-	matches, err := p.fetch()
+func generate(ctx context.Context, p pkg, exclude map[string]struct{}) error {
+	matches, err := p.fetch(ctx)
 	if err != nil {
-		panic(fmt.Sprintf("fetch %s: %v", p.name, err))
+		return fmt.Errorf("fetch: %w", err)
 	}
 
-	if len(p.exclude) > 0 {
-		filtered := make(espanso.Matches, 0, len(matches))
-		for i := range matches {
-			skip := false
-			for _, t := range matches[i].Triggers {
-				if _, ok := p.exclude[t]; ok {
-					skip = true
-					break
+	if len(exclude) > 0 {
+		matches = matches.Filter(func(m espanso.Match) bool {
+			for _, t := range m.Triggers {
+				if _, ok := exclude[t]; ok {
+					return false
 				}
 			}
-			if !skip {
-				filtered = append(filtered, matches[i])
-			}
-		}
-		matches = filtered
+			return true
+		})
 	}
 
 	matches = matches.SetWord(true).SetPropagateCase(true).Sort().Deduplicate()
 	fmt.Printf("%s: %d matches\n", p.name, len(matches))
 
-	dir := filepath.Join(packagesDir, p.name, p.version)
+	metaDir := filepath.Join(packagesDir, p.name)
+	pkgDir := filepath.Join(metaDir, p.version)
+
+	manifest := espanso.Manifest{
+		Name:        p.name,
+		Title:       p.title,
+		Description: p.shortDesc,
+		Version:     p.version,
+		Author:      author,
+	}
+	if err := manifest.WriteFile(metaDir); err != nil {
+		return fmt.Errorf("write manifest: %w", err)
+	}
 
 	ep := espanso.Package{
 		Name:    p.name,
@@ -335,11 +346,9 @@ func generate(p pkg) espanso.Matches {
 		Version: p.version,
 		Matches: matches,
 	}
-	if err := ep.WriteFile(dir); err != nil {
-		panic(err)
+	if err := ep.WriteFile(pkgDir); err != nil {
+		return fmt.Errorf("write package: %w", err)
 	}
-
-	metaDir := filepath.Join(packagesDir, p.name)
 
 	r := espanso.Readme{
 		Name:      p.name,
@@ -351,12 +360,12 @@ func generate(p pkg) espanso.Matches {
 		LongDesc:  p.longDesc,
 	}
 	if err := r.WriteFile(metaDir); err != nil {
-		panic(err)
+		return fmt.Errorf("write readme: %w", err)
 	}
 
 	if err := p.license.WriteFile(metaDir); err != nil {
-		panic(err)
+		return fmt.Errorf("write license: %w", err)
 	}
 
-	return matches
+	return nil
 }

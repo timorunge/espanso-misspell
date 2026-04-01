@@ -1,0 +1,5 @@
+name: misspell-en
+title: Misspell EN
+description: Replace commonly misspelled english words.
+version: 0.1.2
+author: Timo Runge

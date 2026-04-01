@@ -1,0 +1,5 @@
+name: misspell-fr
+title: Misspell FR
+description: Replace commonly misspelled french words.
+version: 0.1.0
+author: Timo Runge

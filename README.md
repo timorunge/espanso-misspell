@@ -16,7 +16,7 @@ replace commonly misspelled words in multiple languages.
 | `misspell-fr` | French | [Wikipédia Fautes d'orthographe](https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Liste_de_fautes_d%27orthographe_courantes) | CC BY-SA 4.0 | ~91 |
 | `misspell-it` | Italian | [Wikipedia Errori comuni](https://it.wikipedia.org/wiki/Wikipedia:Bot/Richieste/Errori_comuni) | CC BY-SA 4.0 | ~331 |
 
-`misspell-en-codespell` is deduplicated against `misspell-en` — install both
+`misspell-en-codespell` is deduplicated against `misspell-en` - install both
 for maximum coverage without trigger conflicts.
 
 ## Usage

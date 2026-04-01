@@ -1,0 +1,5 @@
+name: misspell-de
+title: Misspell DE
+description: Replace commonly misspelled german words.
+version: 0.1.0
+author: Timo Runge

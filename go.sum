@@ -1,7 +1,7 @@
 github.com/client9/misspell v0.3.4 h1:ta993UF76GwbvJcIo3Y68y/M3WxlpEHPWIGDkJYwzJI=
 github.com/client9/misspell v0.3.4/go.mod h1:qj6jICC3Q7zFZvVWo7KLAzC3yx5G7kyvSDkc90ppPyw=
-github.com/timorunge/espanso v0.0.0-20260331174608-032f0e996f48 h1:cR8Yw3Ykob0PH87IKkKTyxlTbTogFl3MWmXcDUwAhMI=
-github.com/timorunge/espanso v0.0.0-20260331174608-032f0e996f48/go.mod h1:5MCtiPagYhX93KcU+0jhjxQzqaSNNf2rshNwz1uN4Z4=
+github.com/timorunge/espanso v0.1.0 h1:DOlyGPzf9GZjhqJlxNzDJfzf6vhgXWA2/b5c/R6O994=
+github.com/timorunge/espanso v0.1.0/go.mod h1:5MCtiPagYhX93KcU+0jhjxQzqaSNNf2rshNwz1uN4Z4=
 gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405 h1:yhCVgyC4o1eVCa2tZl7eS0r+SDo693bJlVdllGtEeKM=
 gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405/go.mod h1:Co6ibVJAznAaIkqp8huTwlJQCZ016jof/cbN4VW5Yz0=
 gopkg.in/yaml.v3 v3.0.1 h1:fxVm/GzAzEWqLHuvctI91KS9hhNmmWOoWu0XTYJS7CA=
